@@ -13,27 +13,34 @@
 {{--        <input type="file" id="image wire:change=$emit('fileChosen')">--}}
 {{--</section>--}}
 <div class="w-2/3 mx-auto my-4">
-    <h2 class="mx-auto w-max block text-xl">Comments</h2>
+    <h2 class="mx-auto w-max block text-2xl">Comments</h2>
 
     <p class="my-10 mb-3 text-xl text-black">{{ $newComment }}</p>
 
     @error('newComment')
-    <div class="mt-4 text-red-500">{{ $message }}</div>
+    <div class="mt-3 text-red-500">{{ $message }}</div>
     @enderror
 
-    <form wire:submit.prevent="addComment" class="mb-4 flex">
-        @csrf
-        <input type="text" class="w-full rounded border shadow p-2 mr-2 my-2"
-               placeholder="What is in your mind?" wire:model.debounce.600ms="newComment">
-        <button class="rounded shadow bg-green-500 text-white p-2 ml-2"
-                type="submit">Submit</button>
-    </form>
-
     @if (session()->has('message'))
-        <div class="bg-yellow-500 text-center mt-5 rounded p-2 text-white">
+        <div class="bg-yellow-600 text-center mb-5 rounded p-2 text-white shadow">
             {{ session('message') }}
         </div>
     @endif
+    @if (session()->has('delete'))
+        <div class="bg-red-600 text-center mb-5 rounded p-2 text-white shadow">
+            {{ session('delete') }}
+        </div>
+    @endif
+
+    <form wire:submit.prevent="addComment" class="mb-4 flex">
+        @csrf
+        <input type="text" class="w-full rounded border shadow p-4 mr-2 my-2"
+               placeholder="What is in your mind?" wire:model.lazy="newComment">
+        <button class="rounded shadow bg-green-500 text-white p-3 m-2 text-2xl"
+                type="submit">Submit</button>
+    </form>
+
+
     @foreach($comments as $comment)
         <div class="rounded border shadow p-3 my-3">
             <i class="fas fa-times text-red-200 hover:text-red-500 float-right"
@@ -50,4 +57,5 @@
             <p class="text-gray-800">{{ $comment['body'] }}</p>
         </div>
     @endforeach
+    {{ $comments->links() }}
 </div>

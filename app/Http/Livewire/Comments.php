@@ -5,16 +5,18 @@ namespace App\Http\Livewire;
 use App\Models\Comment;
 use Carbon\Carbon;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Comments extends Component
 {
-    public $comments;
+    use WithPagination;
+//    public $comments;
     public $newComment;
 
     public function mount(){
-        $intialComments = Comment::with('user')->get();
+//        $intialComments = Comment::with('user')->get();
 //        dd($intialComments);
-        $this->comments = $intialComments;
+//        $this->comments = $intialComments;
     }
 
     protected $rules = [
@@ -31,19 +33,21 @@ class Comments extends Component
         $createdComment = Comment::create(['body' => $this->newComment, 'user_id' => 3]);
 //        dd($comment);
 //        $createdComment->loadMissing('user');
-        $this->comments->prepend($createdComment->latest()->first());
+//        $this->comments->prepend($createdComment->latest()->first());
         $this->newComment = '';
-        session()->flash('message', 'Comment Added Successfully! 🤣');
+        session()->flash('message', 'Comment Added Successfully! ✌');
     }
 
     public function remove($commentId){
         $comment = Comment::find($commentId);
         $comment->delete();
-        $this->comments = $this->comments->except($commentId);
+//        $this->comments = $this->comments->except($commentId);
+        session()->flash('delete', 'Comment Deleted Successfully! 😒');
     }
 
     public function render()
     {
-        return view('livewire.comments');
+        return view('livewire.comments',
+            ['comments'=> Comment::with('user')->latest()->paginate(3)] );
     }
 }
