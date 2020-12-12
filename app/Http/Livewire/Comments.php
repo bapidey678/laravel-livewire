@@ -33,6 +33,7 @@ class Comments extends Component
 //        $createdComment->loadMissing('user');
         $this->comments->prepend($createdComment->latest()->first());
         $this->newComment = '';
+        session()->flash('message', 'Comment Added Successfully! 🤣');
     }
 
     public function remove($commentId){

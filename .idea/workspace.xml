@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3cb4c21-e699-4768-8da9-89d96cf85ab3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/livewire.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/livewire.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Comments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/comments.blade.php" afterDir="false" />
@@ -189,7 +188,7 @@
       <workItem from="1607699751499" duration="417000" />
       <workItem from="1607700188064" duration="90000" />
       <workItem from="1607700293829" duration="9924000" />
-      <workItem from="1607760563835" duration="1008000" />
+      <workItem from="1607760563835" duration="1884000" />
     </task>
     <task id="LOCAL-00001" summary="Delete feature">
       <created>1607760874909</created>
@@ -205,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607761327983</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Live verification added">
+      <created>1607761955764</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607761955764</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +233,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Delete feature" />
     <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <MESSAGE value="Live verification added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Live verification added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

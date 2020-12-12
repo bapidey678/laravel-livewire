@@ -29,6 +29,11 @@
                 type="submit">Submit</button>
     </form>
 
+    @if (session()->has('message'))
+        <div class="bg-yellow-500 text-center mt-5 rounded p-2 text-white">
+            {{ session('message') }}
+        </div>
+    @endif
     @foreach($comments as $comment)
         <div class="rounded border shadow p-3 my-3">
             <i class="fas fa-times text-red-200 hover:text-red-500 float-right"
