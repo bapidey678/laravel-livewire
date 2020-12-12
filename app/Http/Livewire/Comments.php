@@ -17,8 +17,17 @@ class Comments extends Component
         $this->comments = $intialComments;
     }
 
-    public function addComment(){
+    protected $rules = [
+        'newComment' => 'required|max:255',
+    ];
 
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
+    public function addComment(){
+        $this->validate();
         $createdComment = Comment::create(['body' => $this->newComment, 'user_id' => 3]);
 //        dd($comment);
 //        $createdComment->loadMissing('user');

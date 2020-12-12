@@ -15,12 +15,16 @@
 <div class="w-2/3 mx-auto my-4">
     <h2 class="mx-auto w-max block text-xl">Comments</h2>
 
-    <p class="mt-10 text-xl text-red-500">{{ $newComment }}</p>
+    <p class="my-10 mb-3 text-xl text-black">{{ $newComment }}</p>
 
-    <form wire:submit.prevent="addComment" class="my-4 flex">
+    @error('newComment')
+    <div class="mt-4 text-red-500">{{ $message }}</div>
+    @enderror
+
+    <form wire:submit.prevent="addComment" class="mb-4 flex">
         @csrf
         <input type="text" class="w-full rounded border shadow p-2 mr-2 my-2"
-               placeholder="What is in your mind?" wire:model.lazy="newComment">
+               placeholder="What is in your mind?" wire:model.debounce.600ms="newComment">
         <button class="rounded shadow bg-green-500 text-white p-2 ml-2"
                 type="submit">Submit</button>
     </form>
