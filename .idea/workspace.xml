@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3cb4c21-e699-4768-8da9-89d96cf85ab3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/pagination-links.blade.php" afterDir="false" />
+    <list default="true" id="f3cb4c21-e699-4768-8da9-89d96cf85ab3" name="Default Changelist" comment="pagination">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Comments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/comments.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/pagination-links.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/pagination-links.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +188,7 @@
       <workItem from="1607699751499" duration="417000" />
       <workItem from="1607700188064" duration="90000" />
       <workItem from="1607700293829" duration="9924000" />
-      <workItem from="1607760563835" duration="5406000" />
+      <workItem from="1607760563835" duration="7182000" />
     </task>
     <task id="LOCAL-00001" summary="Delete feature">
       <created>1607760874909</created>
@@ -220,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607764474979</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="pagination">
+      <created>1607769618580</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607769618580</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +249,8 @@
     <MESSAGE value="gitignore" />
     <MESSAGE value="Live verification added" />
     <MESSAGE value="alert" />
-    <option name="LAST_COMMIT_MESSAGE" value="alert" />
+    <MESSAGE value="pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="pagination" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
