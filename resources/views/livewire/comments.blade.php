@@ -27,6 +27,8 @@
 
     @foreach($comments as $comment)
         <div class="rounded border shadow p-3 my-3">
+            <i class="fas fa-times text-red-200 hover:text-red-500 float-right"
+            wire:click="remove({{ $comment->id }})"></i>
             <div class="flex justify-start my-2">
                 <p class="font-blog text-lg">
 {{--                    {{ dd($comment) }}--}}

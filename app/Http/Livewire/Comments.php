@@ -22,8 +22,14 @@ class Comments extends Component
         $createdComment = Comment::create(['body' => $this->newComment, 'user_id' => 3]);
 //        dd($comment);
 //        $createdComment->loadMissing('user');
-        $this->comments->push($createdComment->latest()->first());
+        $this->comments->prepend($createdComment->latest()->first());
         $this->newComment = '';
+    }
+
+    public function remove($commentId){
+        $comment = Comment::find($commentId);
+        $comment->delete();
+        $this->comments = $this->comments->except($commentId);
     }
 
     public function render()
